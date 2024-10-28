@@ -69,3 +69,10 @@ func TestFilter(t *testing.T) {
         }
 	}
 }
+
+func TestDeck(t *testing.T) {
+	cards := New(Deck(3))
+	if len(cards) != 13*4*3 {
+		t.Error("Expected 13*4*3 cards in the deck. Received:", len(cards))
+	}
+}
