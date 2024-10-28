@@ -14,8 +14,6 @@ const (
 	Joker
 )
 
-var suits = [...]Suit{Spade, Diamond, Club, Heart}
-
 type Rank uint8
 
 const (
@@ -50,14 +48,4 @@ func (c Card) String() string {
 		return c.Suit.String()
 	}
 	return fmt.Sprintf("%s of %ss", c.Rank.String(), c.Suit.String())
-}
-
-func New() []Card {
-	var card []Card
-	for _, suit := range suits {
-		for rank := minRank; rank <= maxRank; rank++ {
-			card = append(card, Card{Suit: suit, Rank: rank})
-		}
-	}
-	return card
 }
