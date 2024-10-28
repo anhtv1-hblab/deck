@@ -33,11 +33,6 @@ const (
 	King
 )
 
-const (
-	minRank = Ace
-	maxRank = King
-)
-
 type Card struct {
 	Suit
 	Rank
